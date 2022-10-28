@@ -12,12 +12,12 @@ public class Kugel {
         return this.radius;
     }
     public double getDurchmesser() {
-        return this.radius * 2;
+        return radius * 2;
     }
     public double getVolumen() {
-        return (4 * Math.PI * pow(this.radius, 3))/3;
+        return (4 * Math.PI * pow(radius, 3))/3;
     }
     public double getOberflaeche() {
-        return 4 * Math.PI * pow(this.radius, 2);
+        return 4 * Math.PI * pow(radius, 2);
     }
 }
