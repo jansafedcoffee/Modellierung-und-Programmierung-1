@@ -22,7 +22,7 @@ public class PythagoraeischeZahlentripel {
         for (int i = 0; i < quadratZahlen.length - 1; i++) {
             System.out.print(quadratZahlen[i] + ", ");
         }
-        // Gib die letzte Zahl des Arrays in der selben Zeile aus.
+        // Gib die letzte Zahl des Arrays in der selben Zeile ohne Komma aus.
         System.out.print(quadratZahlen[quadratZahlen.length - 1]);
         System.out.println();
     }
