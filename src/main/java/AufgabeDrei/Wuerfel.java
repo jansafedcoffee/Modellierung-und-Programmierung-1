@@ -1,32 +1,37 @@
 package AufgabeDrei;
 
-import static java.lang.String.format;
+public class Wuerfel implements GeometricObject {
 
-public class Wuerfel {
+    private final double sideLength;
 
-    private final double a;
-
-    public Wuerfel(double a) {
-        if(a < 0) {
-            throw new GeometricObjectException("Parameter a < 0; Wert: " + a);
+    public Wuerfel(double sideLength) {
+        if (sideLength < 0) {
+            throw new GeometricObjectException("Parameter Seiten Länge < 0; Wert: " + sideLength);
         }
-        this.a = a;
+        this.sideLength = sideLength;
     }
 
-    public final double getA() {
-        return this.a;
+    public final double getSideLength() {
+        return this.sideLength;
     }
 
     public final double getRaumdiagonale() {
-        return Math.sqrt(3) * this.a;
+        return Math.sqrt(3) * this.sideLength;
     }
 
     public final double getVolumen() {
-        return Math.pow(this.a, 3);
+        return Math.pow(this.sideLength, 3);
     }
 
     public final double getOberflaeche() {
-        return 6 * Math.pow(this.a, 2);
+        return 6 * Math.pow(this.sideLength, 2);
+    }
+
+    public void prettyPrint() {
+        System.out.println("Würfel mit Seitenlänge = " + getSideLength() +
+                " | Raumdiagonale = " + getRaumdiagonale() +
+                " | Volumen = " + getVolumen() +
+                " | Oberfläche = " + getOberflaeche());
     }
 
 }

@@ -4,8 +4,11 @@ import java.security.InvalidParameterException;
 
 public class GeometricObjectException extends InvalidParameterException {
 
-    public GeometricObjectException () {}
-    public GeometricObjectException (String message) {
+    public GeometricObjectException() {
+        super();
+    }
 
+    public GeometricObjectException(String message) {
+        super(message);
     }
 }
